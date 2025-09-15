@@ -1,0 +1,55 @@
+________________________________________
+Item Title: ZKTeco Biometric Attendance & SMS Notification System (Python)
+________________________________________
+Short Description:
+A robust, production-ready Python system that connects to ZKTeco biometric devices, polls for attendance logs in real-time, and automatically sends SMS alerts to parents. A complete, business-in-a-box solution for schools, perfect for developers or IT integrators.
+________________________________________
+Full Description:
+Tired of building attendance systems from scratch? This is a complete, professional-grade solution that bridges the gap between ZKTeco hardware and real-world school needs. We've spent hundreds of hours solving all the complex edge cases so you don't have to.
+This system is not just a simple script; it's a fully automated, multi-process backend service designed for stability and reliability. It's currently deployed in a real-world boarding school environment, handling thousands of logs without issue.
+Live Preview / Demo:
+Since this is a backend service, a traditional live preview isn't feasible. Instead, we provide:
+• Full, commented source code for you to review.
+• Screenshots of the folder structure, log file output, generated Excel reports, and the central MySQL database.
+• A comprehensive README.md file that guides you through every step of the installation and configuration.
+________________________________________
+Key Features:
+• Direct Device Integration: Connects directly to ZKTeco devices using the pyzk library.
+• Real-Time Polling: Runs as a persistent background service, checking for new attendance logs every few seconds.
+• Accurate IN/OUT Logic: Intelligently interprets the device's punch code (0 for Check-In, 1 for Check-Out) to accurately determine the action. This is far more reliable than state-toggling logic.
+• Multi-Device Architecture: The system is designed to run one isolated Python process per device, preventing a single failing device from crashing the entire system. Management scripts (start_all, stop_all) are included.
+• Automatic SMS Notifications: Seamlessly integrates with the Sematime API to send instant, personalized SMS alerts to parents or guardians.
+• Dual Data Logging:
+1. Central MySQL Database: All records are stored in a structured SQL database for easy reporting and building a future web UI.
+2. Local Excel Reports: Each device script automatically generates its own daily Excel log for simple, offline access.
+• Robust Error Handling: The script is wrapped in extensive try...except...finally blocks. It will handle network timeouts and device freezes gracefully without crashing, logging the error and automatically retrying.
+• Detailed Logging: Creates comprehensive, rotating log files for each device, making troubleshooting and monitoring a breeze.
+• Easy Configuration: All key parameters (device IPs, database credentials, API keys) are located at the top of the script for easy setup.
+________________________________________
+How It Helps You:
+For a School's IT Department:
+• Deploy a Finished Product: Get a professional parent notification system running in hours, not months.
+• Increase School Value: Provide a premium service (SMS alerts) that parents love and that enhances student safety and accountability.
+• Automate Manual Work: Eliminate the need for staff to manually check logbooks and call parents.
+For a Freelance Developer or Integrator:
+• Business-in-a-Box: Rebrand this script and sell it to multiple schools as your own solution. The robust backend is already done.
+• Perfect Foundation: Use this reliable data-collection engine as the backend for a more advanced school management system with a web dashboard (e.g., using Flask or Django).
+• Save Hundreds of Hours: We have solved the tricky parts: concurrent database access, Access DB file handling, stateful logic issues, multi-threading vs. multi-processing architecture, and robust error handling.
+________________________________________
+What You Get:
+• The complete, fully commented Python script (zkteco.py).
+• The start_all_services.bat script to run all device pollers.
+• The stop_all_services.bat script to safely terminate all processes.
+• The launch_silently.vbs script to run the system invisibly in the background.
+• An SQL file (database_setup.sql) to create the necessary MySQL tables.
+• A professional README.md file to guide you through installation.
+________________________________________
+Requirements:
+• Server: A Windows machine (can be adapted for Linux).
+• Web Server Stack: XAMPP or another stack with MySQL.
+• Python: Python 3.x.
+• Libraries: A requirements.txt file is included. Simply run pip install -r requirements.txt. Key libraries include pyzk, pyodbc, mysql-connector-python, openpyxl.
+• Hardware: One or more ZKTeco biometric devices accessible on the network.
+• Software: ZKTime 5.0 installed (for the Access DB user info).
+• API Account: A Sematime account for sending SMS.
+This script is the perfect accelerator for anyone looking to build or deploy a serious attendance management system. Get a massive head start and focus on what matters: delivering value to your clients.
