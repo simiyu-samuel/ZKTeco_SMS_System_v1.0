@@ -89,7 +89,7 @@ To ensure the system starts automatically when the server boots up (highly recom
 ## 5. File Manifest
 
 ```
-/NjoroGirlsSystem/
+/ZKTeco_SMS_System_v1.0/
 │
 ├── DeviceA/
 │   └── zkteco.py           # Script configured for Device A
